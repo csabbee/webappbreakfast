@@ -16,7 +16,7 @@ describe('Controller: CheckoutCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should return zero since there is no item in the basket to begin with', function () {
+    expect(scope.basket.count()).toBe(0);
   });
 });

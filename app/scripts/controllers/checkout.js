@@ -1,10 +1,6 @@
 'use strict';
 
 angular.module('breakfastApp')
-  .controller('CheckoutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('CheckoutCtrl', function ($scope, basket) {
+    $scope.basket = basket;
   });
