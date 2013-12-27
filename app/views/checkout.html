@@ -1,1 +1,33 @@
-<h2>hello there</h2>
+<h2>Checkout</h2>
+<div ng-show="basket.count() > 0">
+  <div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <th>Item name</th>
+      <th>Item price</th>
+      <th>Item quantity</th>
+      <th>Subtotal</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in basket.get()">
+        <td>{{item.type.name}}</td>
+        <td>{{item.type.price | currency}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.type.price * item.quantity | currency}}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" ng-click="basket.remove(item)"><i class="glyphicon glyphicon-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-3">
+      <p><b>Total: </b>{{basket.total() | currency}}</p>
+    </div>
+  </div>
+</div>
+<div ng-show="basket.count() == 0">
+  <p>No items in basket!</p>
+</div>
