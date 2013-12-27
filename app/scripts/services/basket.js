@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('breakfastApp')
-    .service('Basket', function Basket() {
+    .factory('basket', function() {
 
 
       var basket = {};
+      var count = 0;
 
       return{
         get: function () {
@@ -21,7 +22,13 @@ angular.module('breakfastApp')
           }
         },
         remove: function(item) {
-          delete basket[item.id];
+          if(basket[item.id]){
+            count -= basket[item.id].amount;
+            delete basket[item.id];
+          }
+        },
+        count: function() {
+          return count;
         }
       };
     });
