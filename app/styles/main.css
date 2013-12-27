@@ -5,7 +5,7 @@ body {
 }
 @media (max-width: 979px) {
     body {
-        padding-top: 0px;
+        padding-top: 60px;
     }
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
