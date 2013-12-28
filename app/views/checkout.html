@@ -16,7 +16,7 @@
         <td>{{item.quantity}}</td>
         <td>{{item.type.price * item.quantity | currency}}</td>
         <td>
-          <button class="btn btn-danger btn-sm" ng-click="basket.remove(item)"><i class="glyphicon glyphicon-trash"></i></button>
+          <button class="btn btn-danger btn-sm" ng-click="basket.remove(item.type)"><i class="glyphicon glyphicon-trash"></i></button>
         </td>
       </tr>
     </tbody>
