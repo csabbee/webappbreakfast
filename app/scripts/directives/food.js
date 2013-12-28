@@ -4,10 +4,8 @@ angular.module('breakfastApp')
   .directive('food', function () {
     return {
       template:
-      '<div>' +
-      ' <h3>{{item.name}}</h3>' +
-      ' {{item.price | currency}}' +
-      '</div>',
+      ' <b>{{item.name}}</b>' +
+      ' {{item.price | currency}}',
       restrict: 'E',
       scope: {
         'item': '='

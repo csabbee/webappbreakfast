@@ -10,10 +10,8 @@ describe('Directive: food', function() {
 
   beforeEach(inject(function($rootScope, $compile) {
     element = angular.element(
-      '<div id="test">' +
         '<h3>{{first}}</h3>' +
-        '{{second}}' +
-      '</div>'
+        '{{second}}'
     );
     scope = $rootScope.$new();
     element = $compile(element)(scope);
@@ -28,7 +26,7 @@ describe('Directive: food', function() {
       scope.second = 123;
     });
     // THEN
-    expect(element.html()).toBe('<h3 class="ng-binding">testtext</h3>123');
+    expect(element.html()).toBe('testtext');
     expect(element.text()).toBe('testtext123');
   });
 });
