@@ -43,6 +43,11 @@ angular.module('breakfastApp')
             total -= item.price;
             basket[item.id].quantity -= 1;
           }
+        },
+        increment: function(item) {
+          count += 1;
+          basket[item.id].quantity += 1;
+          total += item.price;
         }
       };
     });
