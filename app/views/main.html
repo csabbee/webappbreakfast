@@ -4,16 +4,27 @@
     Always a pleasure scaffolding your apps.
   </p>
 </div>
-
-<div class="row marketing">
-  <ul class="list-unstyled">
-    <li ng-repeat="item in foodcatalog">
-      <food item="item"></food>
-      <button class="btn btn-primary btn-sm" ng-click="basket.add(item)">Add</button>
-    </li>
-  </ul>
+<div>
+  Search: <input ng-model="searchText">
 </div>
-
+<br/>
+<div class="row">
+  <div class="col-xs-7 col-sm-8">
+    <table class="table">
+      <tr ng-repeat="item in foodcatalog | filter:searchText">
+        <td>
+          <food item="item"></food>
+        </td>
+        <td>
+          {{item.description}}
+        </td>
+        <td>
+          <button class="btn btn-primary btn-sm" ng-click="basket.add(item)">Add</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
 <div class="footer">
   <p>♥ from the Yeoman team</p>
 </div>
