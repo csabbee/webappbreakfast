@@ -73,4 +73,15 @@ describe('Service: Basket', function () {
     // THEN
     expect(Basket.count()).toBe(2);
   });
+
+  it('should increment the quantity of the item in the basket', function(){
+    // GIVEN: adding items to the basket
+    foodcatalog.forEach(function(data){
+      Basket.add(data);
+    });
+    // WHEN: increment one item's quantity
+    Basket.increment(foodcatalog[1]);
+    // THEN
+    expect(Basket.count()).toBe(4);
+  });
 });
