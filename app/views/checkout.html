@@ -17,6 +17,8 @@
         <td>{{item.type.price * item.quantity | currency}}</td>
         <td>
           <button class="btn btn-danger btn-sm" ng-click="basket.remove(item.type)"><i class="glyphicon glyphicon-trash"></i></button>
+          <button class="btn btn-success btn-sm" ng-click="basket.increment(item.type)"><i class="glyphicon glyphicon-plus-sign"></i></button>
+          <button class="btn btn-warning btn-sm" ng-click="basket.decrement(item.type)"><i class="glyphicon glyphicon-minus-sign"></i></button>
         </td>
       </tr>
     </tbody>
