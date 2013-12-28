@@ -34,6 +34,15 @@ angular.module('breakfastApp')
         },
         total: function() {
           return total;
+        },
+        decrement: function(item) {
+          if(basket[item.id].quantity === 1){
+            this.remove(item);
+          } else {
+            count -= 1;
+            total -= item.price;
+            basket[item.id].quantity -= 1;
+          }
         }
       };
     });
