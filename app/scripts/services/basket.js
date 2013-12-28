@@ -25,9 +25,9 @@ angular.module('breakfastApp')
           count += 1;
         },
         remove: function(item) {
-          count -= basket[item.type.id].quantity;
-          total -= basket[item.type.id].quantity * item.type.price;
-          delete basket[item.type.id];
+          count -= basket[item.id].quantity;
+          total -= basket[item.id].quantity * item.price;
+          delete basket[item.id];
         },
         count: function() {
           return count;
