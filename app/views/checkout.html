@@ -10,7 +10,7 @@
       <th>Action</th>
     </thead>
     <tbody>
-      <tr ng-repeat="item in basket.get()" tooltip="{{item.type.description}}">
+      <tr ng-repeat="item in basket.get()" tooltip="{{item.type.description}}" ng-class=" 'skew' ">
         <td>{{item.type.name}}</td>
         <td>{{item.type.price | currency}}</td>
         <td>{{item.quantity}}</td>
