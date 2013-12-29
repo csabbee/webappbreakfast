@@ -1,7 +1,7 @@
 <h2>Checkout</h2>
 <div ng-show="basket.count() > 0">
   <div class="table-responsive">
-  <table class="table table-hover">
+  <table class="table table-hover table-condensed">
     <thead>
       <th>Item name</th>
       <th>Item price</th>
@@ -10,7 +10,7 @@
       <th>Action</th>
     </thead>
     <tbody>
-      <tr ng-repeat="item in basket.get()">
+      <tr ng-repeat="item in basket.get()" tooltip="{{item.type.description}}">
         <td>{{item.type.name}}</td>
         <td>{{item.type.price | currency}}</td>
         <td>{{item.quantity}}</td>
