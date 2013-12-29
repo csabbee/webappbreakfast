@@ -5,8 +5,8 @@ angular.module('breakfastApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap',
-  'ngAnimate'
+  'ngAnimate',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider
