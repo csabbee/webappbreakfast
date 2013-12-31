@@ -7,7 +7,8 @@ angular.module('breakfastApp', [
   'ngRoute',
   'ngAnimate',
   'ui.bootstrap',
-  'ngAnimate-animate.css'
+  'ngAnimate-animate.css',
+  'firebase'
 ])
   .config(function ($routeProvider) {
     $routeProvider
