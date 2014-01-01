@@ -1,5 +1,6 @@
 <h2>Checkout</h2>
-<div ng-show="basket.count() > 0">
+<button ng-click="refresh()">refresh</button>
+<div ng-show="basket.length > 0">
   <div class="table-responsive">
   <table class="table table-hover table-condensed">
     <thead>
@@ -10,7 +11,7 @@
       <th>Action</th>
     </thead>
     <tbody>
-      <tr ng-repeat="item in basket.get()" tooltip="{{item.type.description}}" ng-class="'dn-bounce'">
+      <tr ng-repeat="item in basket" tooltip="{{item.type.description}}" ng-class="'dn-bounce'">
         <td>{{item.type.name}}</td>
         <td>{{item.type.price | currency}}</td>
         <td>{{item.quantity}}</td>
